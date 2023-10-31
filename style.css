@@ -1,0 +1,45 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+        
+        #main {
+            width: 30%;
+            height: 50%;
+            background-color:yellow;
+        }
+
+        #pixels {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+
+        #margin {
+            margin: 20px 30px 21px 12px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        #padding {
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            background-color:tomato;
+        }
+
+        #backgroundImage {
+            width: 100%;
+            height: 100%;
+            background-image: url(https://images.unsplash.com/photo-1698491973400-65c0cc1fb0ce?auto=format&fit=crop&q=60&w=800&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHx8);
+            background-size: cover;
+            background-position: center;
+        }

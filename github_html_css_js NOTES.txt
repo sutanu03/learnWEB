@@ -1,5 +1,17 @@
 // GIT COMMANDS ✅
 
+
+// Fetching changes from a remote repository
+git fetch REMOTE-NAME
+# Fetches updates made to a remote repository
+
+// Merging changes into your local branch
+git merge REMOTE-NAME/BRANCH-NAME
+# Merges updates made online with your local work
+
+// Pulling changes from a remote repository
+git pull REMOTE-NAME BRANCH-NAME
+
 git init // initializing the repo
 git remote add origin https://github.com/sutanu03/...git // connecting local repo with github repo
 git remote -v // to verify the remote url is correct
@@ -28,6 +40,8 @@ git push origin main // push the changes that you have made to main branch of th
 10. understand div // it a rectangle with full width but no height (height depends on it's children)
 11. understand id (for id in style = #hello) // creating names for specific reason(id's name can't be repeated)
 12. understand class (for class in style = .a) // class's name can be repeated
+
+
 
 
 

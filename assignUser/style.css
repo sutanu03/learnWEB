@@ -1,0 +1,62 @@
+
+body {
+    background-image: url('image.jpg');
+    background-repeat: no-repeat;
+    filter:brightness(1);
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.user-form {
+    margin-bottom: 20px;
+}
+
+.user-fields {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-fields select,
+.user-fields input {
+    padding: 8px;
+}
+
+#addUser {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+.user-grid {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+
+
+.user-details-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.user-details-grid div {
+    padding: 5px;
+    border-right: 1px solid #ccc;
+}
+
+.user-details-grid div:last-child {
+    border-right: none;
+}

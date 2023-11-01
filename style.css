@@ -43,3 +43,66 @@
             background-size: cover;
             background-position: center;
         }
+
+        #car1 {
+            width: 100px;
+            height: 120px;
+            background-color:darkgreen;
+        }
+
+        #car2 {
+            position: absolute;
+            top: 20%;
+            left: 40%;
+            width: 110px;
+            height: 90px;
+            background-color:gold;
+        }
+
+        #car3 {
+            width: 130px;
+            height: 110px;
+            background-color:crimson;
+        }
+
+        #box {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: teal;
+        }
+
+        #chotaBox {
+            position: absolute;
+            left: 40%;
+            width: 100px;
+            height: 100px;
+            background-color:darkgray;
+        }
+
+        #flexbox {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 500px;
+            height: 500px;
+            background-color: grey;
+        }
+
+        #box1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        #box2 {
+            width: 130px;
+            height: 110px;
+            background-color: blue;
+        }
+
+        #box3 {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }

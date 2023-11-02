@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Supplier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <a class="logo">SGhosal</a>
+        <a href="#" class="active">Home</a>
+        
+        <a href="assignUser.html">Assign User</a>
+        <a href="dashboard.html">Dashboard</a>
+    </div>
+    <h1>Add Supplier</h1>
+    <div class="user-form">
+        <div class="user-fields">
+            <select class="supplierEntry">
+                <option value="UserID 1">Supp-ITC</option>
+                <option value="UserID 2">Supp-LTI</option>
+                <option value="UserID 3">Supp-TCS</option>
+            </select>
+            <input class="supplierEntry" type="text" placeholder="Supplier Name">
+            <input class="supplierEntry" type="text" placeholder="Supplier Address">
+            <input class="supplierEntry" type="email" placeholder="Supplier Email ID">
+            <select class="supplierEntry">
+                <option value="countryCode1">+91</option>
+                <option value="countryCode2">+44</option>
+                <option value="countryCode3">+92</option>
+            </select>
+            <input class="supplierEntry" type="number" placeholder="Supplier Phone Number">
+            
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button id="cancel">Cancel</button>
+        <button id="submit">Submit</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,290 @@
+/* 
+*
+*   navbar
+*
+*/
+.navbar {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.navbar a {
+    float: left;
+    display: flex;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+.navbar a.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.content {
+    padding: 20px;
+}
+
+/* 
+*
+*   body
+*
+*/
+
+body {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, #da4453, #89216b);
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    backdrop-filter: blur(10px);
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+h1 {
+    padding-bottom: 5px;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+}
+
+/* 
+*
+*   user form
+*
+*/
+
+.user-form {
+    justify-content: center;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.user-fields {
+    margin: 5px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+}
+
+.user-fields select,
+.user-fields input {
+    margin: 5px;
+    padding: 8px;
+}
+
+/* 
+*
+*   add user in assignUser.html
+*
+*/
+
+#addUser {
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, .4);
+    mix-blend-mode: screen;
+    color:white;
+    cursor: pointer;
+}
+
+/* 
+*
+*   grid
+*
+*/
+
+.user-grid { 
+    border: 1px 1px solid #ccc;
+    border-radius: 12px;
+    padding: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    color:  white;
+    background-color: rgba(255, 255, 255, .1);
+}
+
+
+
+.user-details-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 2%;
+    grid-row-gap: 20px;
+    border: 1px solid #ccc;
+    padding: 2px;
+    margin-top: 5px;
+}
+
+.user-details-grid div {
+    padding: 5px;
+    border-right: 1px solid #ccc;
+}
+
+.user-details-grid div:last-child {
+    border-right: none;
+}
+
+/* 
+*
+*   cancel button in assignUser.html and newSuppEntry.html
+*
+*/
+
+.buttons #cancel {
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, .4);
+    mix-blend-mode: screen;
+    color:white;
+    cursor: pointer;
+}
+
+/* 
+*
+*   submit button in assignUser.html and newSuppEntry.html
+*
+*/
+
+.buttons #submit {
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, .5);
+    mix-blend-mode: screen;
+    color:black;
+    cursor: pointer;
+}
+
+.userid {
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, .5);
+    mix-blend-mode: screen;
+    color:black;
+    cursor: pointer;
+}
+
+#username {
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, .5);
+    mix-blend-mode: screen;
+    color:black;
+}
+
+.suppliercode {
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, .5);
+    mix-blend-mode: screen;
+    color:black;
+    cursor: pointer;
+}
+
+#suppliername {
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, .5);
+    mix-blend-mode: screen;
+    color:black;
+}
+
+.type {
+        padding: 10px 20px;
+        font-size: 15px;
+        border: none;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, .5);
+        mix-blend-mode: screen;
+        color:black;
+        cursor: pointer;
+}
+
+.dashboard1 {
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 100px;
+    display: flex;
+    margin: 10px;
+    margin-top: 0px;
+    padding: 100px 20px;
+    font-size: 25px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, .4);
+    mix-blend-mode: screen;
+    color:white;
+    cursor: pointer;
+}
+
+.dashboard2 {
+    width: 400px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    margin-top: 0px;
+    padding: 100px 20px;
+    font-size: 25px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, .3);
+    mix-blend-mode: screen;
+    color:black;
+    cursor: pointer;
+}
+
+.user-form1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.supplierEntry {
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, .5);
+    mix-blend-mode: screen;
+    color:black;
+}
+

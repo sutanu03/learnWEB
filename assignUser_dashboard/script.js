@@ -30,9 +30,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     cancelButton.addEventListener('click', function() {
-        const confirmCancel = confirm("Are you sure you want to cancel?");
+        const confirmCancel = confirm("Cancel assigning users?");
         if (confirmCancel) {
-            window.location.href = "index.html"; // Redirects to the "index" page
+            window.location.href = "assignUser.html"; // Redirects to the "assign-user" page
         }
     });
 

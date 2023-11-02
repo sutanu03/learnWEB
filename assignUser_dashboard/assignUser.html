@@ -2,10 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assign User</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="navbar">
+        <a class="logo">SGhosal</a>
+        <a href="#" class="active">Home</a>
+        
+        <a href="assignUser.html">Assign User</a>
+        <a href="dashboard.html">Dashboard</a>
+    </div>
     <h1>Assign User</h1>
     <div class="user-form">
         <div class="user-fields">
@@ -14,17 +22,16 @@
                 <option value="UserID 2">UserID 2</option>
                 <option value="UserID 3">UserID 3</option>
             </select>
-            <input type="text" placeholder="User Name">
+            <input id="username" type="text" placeholder="User Name">
             <select class="suppliercode">
                 <option value="SupplierCode 1">SupplierCode 1</option>
                 <option value="SupplierCode 2">SupplierCode 2</option>
                 <option value="SupplierCode 3">SupplierCode 3</option>
             </select>
-            <input type="text" placeholder="Supplier Name">
+            <input id="suppliername" type="text" placeholder="Supplier Name">
             <select class="type">
-                <option value="Type 1">Type 1</option>
-                <option value="Type 2">Type 2</option>
-                <option value="Type 3">Type 3</option>
+                <option value="Normal">Normal</option>
+                <option value="Admin">Admin</option>
             </select>
             <button id="addUser">Add User</button>
         </div>

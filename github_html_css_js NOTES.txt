@@ -70,3 +70,11 @@ git push origin main // push the changes that you have made to main branch of th
 
 1. var let const
 2. hoitsing
+3. data types
+4. conditionals
+5. loops
+6. functions
+7. param arguments
+8. Array
+9. Push pop shift unshift
+10. Objects

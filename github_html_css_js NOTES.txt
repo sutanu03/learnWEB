@@ -73,8 +73,9 @@ git push origin main // push the changes that you have made to main branch of th
 3. data types
 4. conditionals
 5. loops
-6. functions
-7. param arguments
-8. Array
-9. Push pop shift unshift
+6. functions // bar bar repeat karna
+7. param arguments // parameter and arguments
+8. Array // collection of data
+9. Push pop shift unshift splice // push = last ele add, pop = last element remove, unshift = add ele at first. shift = remove from first
+  [splice = remove values from anywhere in the array (arr.splice(2,3) = remove from only index 2 to index 4 / 3values from index 2] 
 10. Objects

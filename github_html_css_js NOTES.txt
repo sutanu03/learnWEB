@@ -78,4 +78,21 @@ git push origin main // push the changes that you have made to main branch of th
 8. Array // collection of data
 9. Push pop shift unshift splice // push = last ele add, pop = last element remove, unshift = add ele at first. shift = remove from first
   [splice = remove values from anywhere in the array (arr.splice(2,3) = remove from only index 2 to index 4 / 3values from index 2] 
-10. Objects
+10. Objects // ek indivisual ki saari details ko hold karna that's an object , in a key value pair (ex: key = "age" , value = "24")
+  // 1) blank obj
+  var a = {};
+  // 2) filled obj
+  var a = {
+      age: 24,
+      name: "Sutanu",
+      email: "sg@gmail.com",
+      contact: 80456524145,
+      kuchbolo: function () {}
+      }
+      a.name = "Sutanu Ghosal"
+  // accessing value
+  console.log(a.age);
+  //output = 24;
+  // here age, name, email, contact are properties but kuchbolo is also a property but it is called a method 
+  // updating any property
+    the name is now changed in the object from "Sutanu" to "Sutanu Ghosal"

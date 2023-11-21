@@ -96,3 +96,8 @@ git push origin main // push the changes that you have made to main branch of th
   // here age, name, email, contact are properties but kuchbolo is also a property but it is called a method 
   // updating any property
     the name is now changed in the object from "Sutanu" to "Sutanu Ghosal"
+
+
+
+
+// Advance - JavaScript 👍ongoing

@@ -100,7 +100,23 @@ git push origin main // push the changes that you have made to main branch of th
 
 
 
-// Advance - JavaScript 👍ongoing
+// Advance - JavaScript ✅
 
-
+1. first diff b/w var, let, const
+2. second diff b/w var. let, const
+3. third diff b/w var, let, const
+4. stack
+5. heap memory
+6. execution context
+7. lexical environment
+8. how to copy reference values
+9. truthy and falsy
+10. switch case
+11. for each loop
+12. for in loop
+13. do while loop
+14. callback function
+15. first class functions
+16. how arrays are made behind the scenes, how can we make negative indexes
+17. how to delete object prop
 

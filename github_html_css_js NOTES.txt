@@ -102,11 +102,13 @@ git push origin main // push the changes that you have made to main branch of th
 
 // Advance - JavaScript ✅
 
-1. first diff b/w var, let, const
-2. second diff b/w var. let, const
-3. third diff b/w var, let, const
-4. stack
-5. heap memory
+js has two main versions -- es5(old) and es6(new)
+
+1. first diff b/w var, let, const // es5 had only var (in es6 - let and const added)
+2. second diff b/w var. let, const // var is function scoped where let and const    is braces scoped
+3. third diff b/w var, let, const // var adds itself to the window object but       let,const doesn't adds
+4. stack // like a sequence wise data(plate in hotel(LIFO))
+5. heap memory // for exp: for one calculation the intermediate data(not final      answer) is stored in heap memory
 6. execution context
 7. lexical environment
 8. how to copy reference values

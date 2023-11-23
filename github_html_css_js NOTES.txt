@@ -104,21 +104,199 @@ git push origin main // push the changes that you have made to main branch of th
 
 js has two main versions -- es5(old) and es6(new)
 
-1. first diff b/w var, let, const // es5 had only var (in es6 - let and const added)
-2. second diff b/w var. let, const // var is function scoped where let and const    is braces scoped
-3. third diff b/w var, let, const // var adds itself to the window object but       let,const doesn't adds
-4. stack // like a sequence wise data(plate in hotel(LIFO))
-5. heap memory // for exp: for one calculation the intermediate data(not final      answer) is stored in heap memory
-6. execution context
-7. lexical environment
-8. how to copy reference values
-9. truthy and falsy
-10. switch case
-11. for each loop
-12. for in loop
-13. do while loop
-14. callback function
-15. first class functions
-16. how arrays are made behind the scenes, how can we make negative indexes
-17. how to delete object prop
+// 1. diff b/w var let const
+//  a. js has two main versions -- es5 & es6. es5 only had var (let and const added in es6)
+
+//  b. var is function scoped where let and const is braces scoped
+
+function abcd() {
+  // for const it is printing only 1 and then showing error
+  for (
+    var i = 1;
+    i < 10;
+    i++ // for let, it is printing 1 to 9 then showing error
+  ) {
+    console.log(i);
+  }
+  console.log(i); // in other programming languages this is not allowed (i can't be used outside for loop) but in js it is possible
+  // because the var is function scoped means it can be used anywhere within the parent function
+  // in output it is printing 1 to 10
+}
+abcd();
+
+// c. var adds itself to the window object but let,const doesn't adds
+//    window is something where the features we use which is not existed in js
+
+// window is a box of features provided by browser (such as alert, document, promt, console etc...)
+
+// for example, we have a pen(js) and a paper. now we want to write something in the paper
+// we can easily write it, bcz it a feature of the pen
+// but if we want to find the mobile stand (mobile stand is not a feature of the pen),
+// the pen went to a box(window) and find the mobile stand and give it to me
+// though mobile stand is not a feature of a pen just like that js went to the window to take help and use that feature
+
+var a = 12;
+
+let b = 15;
+
+const c = 20;
+
+// in window of browser, it is only showing a = 12 (because of var) not b and c
+// var add itself to the browser window object
+
+// 2. Browser context api
+
+// it has 3 main thing window(discuss earlier), stack, heap memory
+
+// 3. Stack
+// like a sequence wise data(plate in hotel(LIFO))
+
+// 4. heap memory
+// every variables or data which has to stored somewhere, that is named as heap memory
+// for exp: for one calculation the intermediate data(not final answer) is stored in heap memory
+
+// 5. Execution context
+// it is a container where the function's code is executed and it's created whenever
+// a function is called, it contains 3 things-- variables, functions and lexical environment.
+
+function xy() {
+  var x = 12;
+  function def() {
+    var y = 15;
+  }
+}
+
+xy();
+
+// in this example; execution context is that parent func i.e. function xy() where it can use var a and function def() but it can't use b;
+// bcz var(scope upto nearest parent func) can be accessible by the parent function only
+// so here, var b can't be use outside function def()
+
+// 6. Lexical environment -- it is a kind of chart jisme likha hota hai ke aapka particular function ki cheejo ko access kar sakta hai and kinko nahi. mtlb it holds it's scope and scope chain.
+// for exp : suppose we have 10 functions as nested, then the last one or the inside one func can access the values of the outside one. (this is scope chain)
+// parent functions values can be accessed but not the children function values
+
+// 7. How to copy reference values (spread operator)
+// if we have an array for exp : var a = [1,2,3,4,5]; and we want to copy it like -- var b = a;
+// then it is not copied, if we want to pop() any element from b, it will also be removed from a.
+// that's where we use reference operator
+
+var a = [1, 2, 3, 4, 5];
+var b = [...a]; // copying values from a to b using [...a] (spread operator)
+
+b.pop(); // now if we want to remove last value from b, it will only remove from b, not from a.
+
+// we can also copy objects as well using spread operator
+// for exp :
+var obj = { name: "Sutanu" };
+var copyObj = { ...obj };
+
+// 8. Truthy and falsy
+// truthy and falsy are different from true and false
+// falsy values = 0, false, undefined, null, NaN(not a number), document.all
+// truthy values =  every values except falsy
+
+// 9. switch case
+// just like other prog lang.
+switch (a) {
+  case 1:
+    console.log(1);
+    break;
+  case 2:
+    console.log(2);
+    break;
+  default:
+    console.log("hello");
+}
+
+// 10. for-each for-in for-of do-while loops
+// a. for-each -- works for array
+
+var a = [1, 2, 3, 4, 5];
+
+a.forEach(function (value) {
+  console.log(val + 2); // printing every array elements with + 2
+});
+
+// b. for-in -- works for objects
+
+var obj = {
+  name: "Sutanu",
+  age: 24,
+  city: "Kolkata",
+};
+
+for (var key in obj) {
+  console.log(key); // prints only name, age, city
+  console.log(obj[key]); // prints Sutanu, 24, Kolkata
+  console.log(key, obj[key]); // prints both name, age, city and Sutanu, 24, Kolkata
+}
+
+// c. do-while
+
+var a = 12;
+
+do {
+  console.log(hello); // do while run even the condition false bcz while comes later
+  a++;
+} while (a < 15);
+
+// 11. callback functions
+// it is also a function where  we can set when the function is called
+// for exp:
+
+// a part of async js
+setTimeout(function () {
+  console.log("called after 2 seconds");
+}, 2000); // 2000 miliseconds = 2 seconds
+
+// 12. First Class Functions
+// we can use those functions as a value
+
+function abcd(a) {
+  a();
+}
+// here i use function as a value/variables
+abcd(function () {
+  console.log("hey");
+});
+
+// 13. how arrays are made behind the scenes, how can we make negative indexes array
+
+// var a = [1,2,3]; --is not acctually an array, it is an object
+
+// js converts array from objects like --
+
+//from
+var arr = [11, 22, 33];
+
+//make negative index
+arr[-1] = 2;
+//to
+arr = {
+  0: 11,
+  1: 22,
+  2: 33,
+  -1: 2
+};
+
+
+// we can know when we have array or objectPosition: 
+
+//in console
+Array.isArray([]) --> true // array
+
+Array.isArray({}) --> false // object
+
+
+// 14. how to delete object props 
+
+var obj = {
+  name: "Sutanu",
+  age: 24,
+  city: "Kolkata",
+};
+
+delete a.age; // deletes age from obj
+
 

@@ -69,7 +69,7 @@ git push origin main // push the changes that you have made to main branch of th
 // JS - Basic ✅
 
 1. var let const
-2. hoitsing
+2. hoitsing // variables can be used before made like in line no 4 - console.log(a); and in line no 5 - var a = 12; (only possible in js).
 3. data types
 4. conditionals
 5. loops

@@ -241,6 +241,17 @@ do {
   a++;
 } while (a < 15);
 
+// d. for - of loop
+
+// It lets you loop over iterable data structures such as Arrays, Strings, Maps, NodeLists, and more:
+
+const cars = ["BMW", "Volvo", "Mini"];
+
+let text = "";
+for (let x of cars) {
+  text += x;
+}
+
 // 11. callback functions
 // it is also a function where  we can set when the function is called
 // for exp:

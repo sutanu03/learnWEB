@@ -311,3 +311,8 @@ var obj = {
 delete a.age; // deletes age from obj
 
 
+
+
+// Advance JavaScript -- PART 2 ✅
+
+// 1. 

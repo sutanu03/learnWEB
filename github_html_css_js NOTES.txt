@@ -315,4 +315,159 @@ delete a.age; // deletes age from obj
 
 // Advance JavaScript -- PART 2 ✅
 
-// 1. 
+/* METHOD =  ek function jo object ke andar ho, usse hum method kehte h */
+
+// 1. Higher order function. 👍
+// A function which accept a function in a parameter or return a function or both.
+
+//imp : ForEach method always takes another function inside it, so, ForEach is a higher order function
+// var arr = [1,2,3,4,5];
+// arr.forEach(function(){}) // forEach is a higher order function
+
+function abcd(val) {} // here abcd is a higher order function
+
+abcd(function () {});
+
+// 2. Constructor function. 👍
+// jab aapke paas aisa koi mauka ho ke aapko ek jaisi properties waale bohot saare elements banaane hai us waqt aap constructor fnc use kaar skte ho.
+
+// new keyword + constructor function = instance (one individual created by one constructor function)
+
+function saanchaOfBiscuit(height) {
+  this.width = 12;
+  this.height = height;
+  this.color = "brown";
+  this.taste = "sugary";
+}
+// same bicuits with different heights
+var biscuit1 = new saanchaOfBiscuit(22);
+var biscuit2 = new saanchaOfBiscuit(24); // new instance = new biscuit
+
+// 3. First class function. 👍
+// we can use those functions as a value or va variable
+
+function abcd(a) {
+  a();
+}
+// here i use function as a value/variables
+abcd(function () {
+  console.log("hey");
+});
+
+// 4. new keyword 👍
+// new matlab ek blank object banao
+// new keyword always creates a blank object for the constructor function which is getting called just after new keyword.
+
+// 5. iife (immediately invoked function expression). 👍
+// iife hai function ko turant chalane ki kala, is tareeke se ki hum log koi private variable bana paaye.
+
+(function () {
+  var privateValue = 12;
+})(); //----> this is iife (privateValue is not accesible from console/private variables)
+
+// we can access the value of change the value using getter and setter
+(function () {
+  var privateValue = 12;
+  return {
+    getter: function () {
+      console.log(privateValue);
+    },
+    setter: function (visibleVal) {
+      privateValue = visibleVal;
+    },
+  };
+})();
+
+// 6. Prototype. 👍
+// when we create a object (such as: var obj = {name:"Sutanu"}), there are some helper functions/methods(such as: hasOwnProperty(), .length() -- for arrays) provided by js, those functions/methods are the part of prototype
+
+// 7. Prototypal Inheritance. 👍
+// some property matches from parents, that is inheritance
+// if we pass some features from parent to children via prototype is called prototypal inheritance.
+
+var Human = {
+  name: "Sutanu Ghosal",
+  canFly: false,
+  canTalk: true,
+};
+
+// some extra features for human sutanu
+var ScubeCompanyEmployee = {
+  solveQuestions: true,
+  createWebsites: true,
+};
+
+ScubeCompanyEmployee.__proto__ = Human; // borrowed all properties from human to scubeCompanyEmployee
+
+// 8. this calls apply bind 👍
+
+// jab bhi koi cheej {} brackets ke andar nahi hoti to hum usse GLOBAL SCOPE kehte hai.
+var s = 12;
+
+// but here
+function pqrs() {
+  var s = 12; // here s is not GLOBAL, it is in pqrs's LOCAL SCOPE
+}
+
+// this is a keyword, whose value can be different in different places
+/* this values -->
+global => window
+function => window
+method => object // in any method, "this" keyword always refers to parent object
+eventListener => that what is written before eventListener  
+*/
+
+// call apply bind (motive ek hai) => agar tumhaare paas koi function hai and koi object hai and tumhe function chalana hai aur by default jo "this" ki value window hai usse window na rakh kar point karwana hai kisi object ki taraf.
+function abcd() {
+  console.log(this.age);
+}
+
+var obj = { age: 24 };
+
+abcd.call(obj); //call function
+// now "this" value changed from "window" to 24.
+
+// apply is kind of similar like call() but passes parameter/values as arrays
+
+function abcd(val, val2, val3) {
+  console.log(this, val, val2, val3);
+}
+
+var obj = { age: 24 };
+
+abcd.call(obj, 1, 2, 3); // call function
+// or
+abcd.apply(obj, [1, 2, 3]); // apply function
+
+// bind => do bind with object with function
+
+function abcd() {
+  console.log(this);
+}
+
+var obj = { age: 24 };
+
+var bindedFnc = abcd.bind(obj); // binded
+
+bindedFnc(); // calling function bindedFnc
+
+// 9. pure & impure function 👍
+
+function impureFunction(val) {
+  return Math.random() * val;
+}
+
+var ans1 = abcd(2);
+var ans2 = abcd(2); // ans2 and ans1 are different, so abcd is a impure function
+
+// pure function => aisa function jo ki same input dene par same output de har baar, aur wo global variable ki value change na kaare.
+
+function pureFunction(a, b) {
+  return a * b;
+}
+
+var ans1 = abcd(1, 2);
+var ans2 = abcd(1, 2); // doesn't matter how many times the function gets called, it returns same value, that is why this is a pure function
+
+// closures
+ 

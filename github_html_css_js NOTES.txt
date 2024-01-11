@@ -21,6 +21,14 @@ git commit -m "first commit" // commit after changing
 git pull --rebase origin main // to rebase
 git push origin main // push the changes that you have made to main branch of the repo
 
+// To discard unstaged changes to a file permanently:
+
+git checkout -- MyApp/mylib
+
+// To discard changes and save them for later use
+
+git stash
+
 
 
 

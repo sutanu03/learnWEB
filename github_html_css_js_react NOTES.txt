@@ -479,3 +479,33 @@ var ans2 = abcd(1, 2); // doesn't matter how many times the function gets called
 
 // closures
  
+
+// Prerequisite of JS before learn REACT JS ✅
+
+1. Array
+2. Arrow function = () => {}
+3. Objects
+4. Map -- looks like for each loop but actually not (it makes a copy of original array and then performs some operations)
+5. Filter -- same like map but 
+6. Reduce 
+7. (VVI) Destructuring
+8. Mutability and immutability
+
+// Topics to be good at React ✅
+1. Component --> every small div like things are component or we can say if we need anything that is repeating we make compponent
+2. Data usage - JSX - Data flow --> flows data from top to bottom / from parent to child
+3. Props --> use to flow data or functions from parent to child
+4. State - useState --> State = Data (to change anything in data, change the state/main data) using useState function
+5. Effect - useEffect --> performs once the website is loaded (for exp- we want to use animation of some component or state wise change)
+
+// Some notes of React ✨
+1. Everything big or repeated are components
+2. Components can have data
+3. Data is called State/ Data stored in State(like variables)
+4. change state and component will recalculate
+5. Props for sending data from parent to child component
+6. Effect runs when DOM is loaded
+7. JSX looks like HTML but not (in html--> <h1>2+2</h1> = 2+2, in JSX--> <h1>{2+2}</h1> = 4)
+
+
+
